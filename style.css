@@ -1,0 +1,43 @@
+:root{
+    /* Colors */
+    --white:hsl(0, 100%, 100%);
+    --black:hsl(0, 0%, 0%);
+    --grey_950:hsl(216, 12%, 8%);
+    --grey_900:hsl(213, 19%, 18%);
+    --grey_500:hsl(217, 12%, 63%);
+    --orange_500:hsl(25, 97%, 53%);
+    gradient: linear-gradient(90deg, hsl(215, 20%, 17%) 0%, hsl(216, 24%, 12%) 100%);
+
+    /* Typography */
+    --font-family: 'Overpass', sans-serif;
+    --fs-1:28px;
+    --lh-1: 2.18rem;
+    --ls: 0;
+
+     --fs-2:24px;
+    --lh-2: 1.87rem;
+
+    --fs-3:16px;
+    --lh-3:1.5rem;
+    --ls-3:0.2px;
+    
+   --fs-4:15px;    /* Overpass Regular */
+    --ls-4:2px;
+
+    --fs-5:14px;    /* Overpass Bold */
+    --lh-5:1.125rem;
+    --ls-5:1.87px;
+    --ls-5-semibold:0.17px;  /* Overpass SemiBold */
+    --lh-overpass-regular:1.375rem; /* Overpass Regular */
+
+    /* Spacing Tokens */
+  --spacing-0: 0px;
+  --spacing-100: 8px;   /* 0.5rem */
+  --spacing-200: 16px;  /* 1rem */
+  --spacing-300: 24px;  /* 1.5rem */
+  --spacing-400: 32px;  /* 2rem */
+  --spacing-500: 40px;  /* 2.5rem */
+  --spacing-1300: 104px; /* 6.5rem */
+  --spacing-1700: 136px; /* 8.5rem */
+
+}
