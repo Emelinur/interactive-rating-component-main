@@ -1,53 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main>
+      <article>
+        <!-- Rating state start -->
+        <section class="rating-card__section" id="ratingState">
+          <figure class="rating-card__img">
+          <img src="images/icon-star.svg" alt="star image" />
+        </figure>
+          <div
+            role="form"
+            aria-label=" Rating content"
+            class="rating-card-body"
+          >
+            <h1 class="rating-card__title">How did we do?</h1>
+            <p class="rating-card__content">
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
 
-  <!-- Rating state start -->
+            <div
+              role="group"
+              aria-label="Rating options"
+              class="rating-card__score-list"
+              id="score-list"
+            >
+              <button
+                type="button"
+                class="rating-card__score-btn"
+                aria-label="Rating 1"
+              >
+                1
+              </button>
+              <button
+                type="button"
+                class="rating-card__score-btn"
+                aria-label="Rating 2"
+              >
+                2
+              </button>
+              <button
+                type="button"
+                class="rating-card__score-btn"
+                aria-label="Rating 3"
+              >
+                3
+              </button>
+              <button
+                type="button"
+                class="rating-card__score-btn"
+                aria-label="Rating 4"
+              >
+                4
+              </button>
+              <button
+                type="button"
+                class="rating-card__score-btn"
+                aria-label="Rating 5"
+              >
+                5
+              </button>
+            </div>
+          </div>
+          <button type="submit" id="submit-btn" class="rating-card__submit-btn">
+            SUBMIT
+          </button>
+        </section>
+        <!-- Rating state end -->
 
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <!-- Thank you state start -->
+        <section class="rating-card__section rating-card--thank-you is-hidden" id="thankState">
+          <figure>
+            <img
+              src="images/illustration-thank-you.svg"
+              alt=" thank you images"
+            />
+          </figure>
+          <p class="rating-card__result">
+            You selected
+            <!-- Add rating here -->
+            <span id="selected-rating">0</span> out of 5
+          </p>
+          <h1 class="rating-card__title">Thank you!</h1>
+          <p class="rating-card__content">
+            We appreciate you taking the time to give a rating.If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </section>
+        <!-- Thank you state end -->
+      </article>
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>

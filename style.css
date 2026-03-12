@@ -1,43 +1,185 @@
-:root{
-    /* Colors */
-    --white:hsl(0, 100%, 100%);
-    --black:hsl(0, 0%, 0%);
-    --grey_950:hsl(216, 12%, 8%);
-    --grey_900:hsl(213, 19%, 18%);
-    --grey_500:hsl(217, 12%, 63%);
-    --orange_500:hsl(25, 97%, 53%);
-    gradient: linear-gradient(90deg, hsl(215, 20%, 17%) 0%, hsl(216, 24%, 12%) 100%);
+:root {
+  /* Colors */
+  --white: hsl(0, 100%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --grey_950: hsl(216, 12%, 8%);
+  --grey_900: hsl(213, 19%, 18%);
+  --grey_500: hsl(217, 12%, 63%);
+  --orange_500: hsl(25, 97%, 53%);
+  --gradient: linear-gradient(
+    180deg,
+    hsl(215, 20%, 17%) 0%,
+    hsl(216, 24%, 12%) 100%
+  );
 
-    /* Typography */
-    --font-family: 'Overpass', sans-serif;
-    --fs-1:28px;
-    --lh-1: 2.18rem;
-    --ls: 0;
+  /* Typography */
+  --ff: "Overpass", sans-serif;
+  --fs-1: 28px;
+  --lh-1: 2.18rem;
+  --ls: 0;
 
-     --fs-2:24px;
-    --lh-2: 1.87rem;
+  --fs-2: 24px;
+  --lh-2: 1.87rem;
 
-    --fs-3:16px;
-    --lh-3:1.5rem;
-    --ls-3:0.2px;
-    
-   --fs-4:15px;    /* Overpass Regular */
-    --ls-4:2px;
+  --fs-3: 16px;
+  --lh-3: 1.5rem;
+  --ls-3: 0.2px;
 
-    --fs-5:14px;    /* Overpass Bold */
-    --lh-5:1.125rem;
-    --ls-5:1.87px;
-    --ls-5-semibold:0.17px;  /* Overpass SemiBold */
-    --lh-overpass-regular:1.375rem; /* Overpass Regular */
+  --fs-4: 15px; /* Overpass Regular */
+  --ls-4: 2px;
 
-    /* Spacing Tokens */
+  --fs-5: 14px; /* Overpass Bold */
+  --lh-5: 1.125rem;
+  --lh-overpass-regular: 1.375rem;
+  --ls-5: 1.87px;
+  --ls-5-semibold: 0.17px; /* Overpass SemiBold */
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+  /* Spacing Tokens */
   --spacing-0: 0px;
-  --spacing-100: 8px;   /* 0.5rem */
-  --spacing-200: 16px;  /* 1rem */
-  --spacing-300: 24px;  /* 1.5rem */
-  --spacing-400: 32px;  /* 2rem */
-  --spacing-500: 40px;  /* 2.5rem */
+  --spacing-100: 8px; /* 0.5rem */
+  --spacing-200: 16px; /* 1rem */
+  --spacing-300: 24px; /* 1.5rem */
+  --spacing-400: 32px; /* 2rem */
+  --spacing-500: 40px; /* 2.5rem */
   --spacing-1300: 104px; /* 6.5rem */
   --spacing-1700: 136px; /* 8.5rem */
+}
 
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff);
+  background-color: var(--grey_950);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+.rating-card__section {
+  max-width: 412px;
+  max-height: 416px;
+  padding: var(--spacing-400);
+  background: var(--gradient);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+align-items: flex-start;
+  gap: var(--spacing-400);
+}
+
+.rating-card__img {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--grey_900);
+  border-radius: 100%;
+  padding: var(--spacing-200);
+  
+}
+.rating-card__title {
+  font-size: var(--fs-1);
+  line-height: var(--lh-1);
+  letter-spacing: var(--ls);
+  color: var(--white);
+}
+.rating-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+.rating-card__content {
+  font-size: var(--fs-4);
+  line-height: var(--lh-3);
+  font-weight: var(--fw-400);
+  color: var(--grey_500);
+}
+.rating-card__score-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.rating-card__score-btn {
+  width: 51px;
+  height: 51px;
+  background-color: var(--grey_900);
+  border: 0px;
+  border-radius: 100%;
+  color: var(--grey_500);
+  font-size: var(--fs-3);
+  line-height: var(--lh-3);
+  letter-spacing: var(--ls-3);
+  font-weight: var(--fw-700);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-200);
+  transition: background-color 0.4s ease;
+}
+.rating-card__score-btn:hover {
+  background-color: var(--orange_500);
+  color: var(--grey_900);
+}
+.selected{
+  background-color: var(--white);
+   transition: background-color 0.1 all;
+}
+.rating-card__submit-btn {
+  width: 100%;
+  background-color: var(--orange_500);
+  border: 0;
+  border-radius: 22.5px;
+  padding: var(--spacing-200);
+  font-size: var(--fs-5);
+  letter-spacing: var(--ls-5);
+  line-height: var(--lh-5);
+  font-weight: var(--fw-400);
+  color: var(--grey_950);
+  transition: background-color 0.4s ease;
+}
+.rating-card__submit-btn:hover {
+  background-color: var(--white);
+  color: var(--grey_950);
+}
+.rating-card--thank-you{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rating-card__result {
+  background-color: var(--grey_900);
+  padding: 6px var(--spacing-200);
+  border-radius: 22.5px;
+  font-size: var(--fs-4);
+  line-height: var(--lh-3);
+  font-weight: var(--fw-400);
+  color: var(--orange_500);
+}
+.is-hidden {
+  display: none;
+}
+@media(width<768px){
+  .rating-card__section{
+    width: 327px;
+    padding: var(--spacing-300);
+    gap:var(--spacing-300);
+     border-radius: 15px;
+  }
+  .rating-card__score-btn {
+    width: 42px;
+    height: 42px;
+  }
 }
