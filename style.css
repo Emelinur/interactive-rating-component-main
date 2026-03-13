@@ -49,8 +49,8 @@
 }
 
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0rem;
+  padding: 0rem;
   box-sizing: border-box;
 }
 body {
@@ -127,7 +127,7 @@ align-items: flex-start;
   justify-content: center;
   align-items: center;
   gap: var(--spacing-200);
-  transition: background-color 0.4s ease;
+ transition: background-color 0.1s ease;
 }
 .rating-card__score-btn:hover {
   background-color: var(--orange_500);
@@ -148,7 +148,7 @@ align-items: flex-start;
   line-height: var(--lh-5);
   font-weight: var(--fw-400);
   color: var(--grey_950);
-  transition: background-color 0.4s ease;
+ transition: background-color 0.1s ease;
 }
 .rating-card__submit-btn:hover {
   background-color: var(--white);
