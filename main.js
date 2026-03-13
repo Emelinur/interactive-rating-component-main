@@ -7,10 +7,9 @@ const selectedRating=document.querySelector("#selected-rating")
 let selectedRatingBtn
 scoreBtnList.forEach((btn) => {
   btn.addEventListener("click", () => {
-    console.log(btn)
+ scoreBtnList.forEach(s=>s.classList.remove("selected"))
     btn.classList.add("selected");
     selectedRatingBtn=btn.innerText;
-    console.log(selectedRatingBtn)
   });
 });
 submitButton.addEventListener("click",()=>{
