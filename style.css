@@ -135,7 +135,7 @@ align-items: flex-start;
 }
 .selected{
   background-color: var(--white);
-   transition: background-color 0.1 all;
+ transition: background-color 0.1s ease;
 }
 .rating-card__submit-btn {
   width: 100%;
@@ -171,7 +171,7 @@ align-items: flex-start;
 .is-hidden {
   display: none;
 }
-@media(width<768px){
+@media(max-width<768px){
   .rating-card__section{
     width: 327px;
     padding: var(--spacing-300);
